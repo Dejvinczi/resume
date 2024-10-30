@@ -13,10 +13,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: docker-resume-builder
-        run: make resume-build
+        run: make build-resume
       - uses: 'marvinpinto/action-automatic-releases@latest'
         with:
-          repo_token: '${{ secrets.GITHUB_TOKEN }}'
+          repo_token: '${{ secrets.RELEASE_TOKEN }}'
           prerelease: false
           automatic_release_tag: latest
           files: |
