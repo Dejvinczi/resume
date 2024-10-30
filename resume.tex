@@ -1,0 +1,236 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+\documentclass[]{awesome-cv}
+\usepackage{textcomp}
+
+\fontdir[fonts/]
+\colorlet{awesome}{awesome-darknight}
+
+\newcommand*{\sectiondir}{resume/}
+\newcommand*{\sepBullet}{{\quad\bullet\quad}}
+\newcommand*{\sepTextBar}{{\quad\textbar\quad}}
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Profile
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+    {\headerfirstnamestyle{Dawid} \headerlastnamestyle{Gurgul}}
+    \\
+    \vspace{2mm}
+    \headersocialstyle{
+    {\fasPhone\ +48*********}
+    \sepBullet\
+    {\fasEnvelope\ \href{mailto:*********@gmail.com}{*********@gmail.com}}
+    \sepBullet\
+    {\fasCalendar\ August 97}
+    \sepBullet\
+    {\fasMapPin\ Kraków}
+    \vspace{1mm}
+    \\
+    }
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Experience
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cvsection{\fasBriefcase\ Work Experience}
+\begin{cventries}
+    \cventry{Backend Developer}
+    {Granteam}
+    {Dec 2020 – Mar 2024}
+    {(hybrid) Kraków}
+    {
+        \begin{cvitems}
+            \item {Contributed as part of an 8-member team to develop a Laboratory Information Management System (LIMS) designed to automate laboratory processes using a monolithic backend architecture in Python, Django, and a RESTful API with the Django Rest Framework.}
+            \item {Developed a CRM module for managing price lists, offers, and contracts, automating the generation of new orders and enhancing the exchange of information between laboratories and clients ordering laboratory tests.}
+            \item {Developed a Test Reports module that automated the generation of PDF test reports, enabling advanced report management based on laboratory workflows and facilitating client delivery upon approval.}
+            \item {Developed a Client Platform web application integrated with the CRM module, allowing clients to inquire about prices, place orders based on offers, and track their test results.}
+            \item {Implemented unit and integration tests using PyTest for system components to ensure optimal functionality and maintain overall system integrity.}
+            \item {Participated in code reviews, contributed to the recruitment process for new backend developers, and assisted in the onboarding of new team members.}
+        \end{cvitems}
+    }
+
+    \cventry{Fullstack Developer}
+    {Granteam}
+    {Aug 2020 – Dec 2020}
+    {Kraków}
+    {
+        \begin{cvitems}
+            \item {Collaborated within a 6-member team to develop end-to-end applications for the Laboratory Information Management System (LIMS), focusing on both frontend and backend functionalities, including the design and implementation of a PostgreSQL database structure for efficient data storage and retrieval.}
+            \item {Worked closely with business analysts to design future system functionality in alignment with customer requirements.}
+            \item {Developed a CSV module responsible for the dynamic creation of templates for importing data into the system via CSV files, utilizing backend logic based on the field properties of Django models, while the frontend TreeTable component provided a user-friendly interface for template customization.}
+            \item {Engaged in comprehensive code reviews and actively participated in daily stand-up meetings to discuss project progress, address challenges, and align on development goals.}
+        \end{cvitems}
+    }
+    \vspace{1mm}
+
+\end{cventries}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Education
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cvsection{\fasGraduationCap\ Education}
+\begin{cventries}
+    \cventry{BEng in Computer Science}
+    {University of the National Education Commission}
+    {Oct 2017 – Feb 2021}
+    {Kraków}
+    {}
+
+    \cventry{Technician in Computer Science}
+    {Energy and Electronics Technical School No 9}
+    {Sep 2013 – Jun 2017}
+    {Kraków}
+    {}
+    \vspace{1mm}
+
+\end{cventries}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Skills
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cvsection{\fasTools\ Skills}
+\begin{cvskills}
+    \cvskill{\fabPython\ Python}{
+        Django,\quad\
+        Django ORM,\quad\
+        Django Rest Framework,\quad\
+        DRF Spectacular,\quad\
+        Black,\quad\
+        Flake8,\quad\
+        Type Hints
+    }
+
+    \cvskill{\fabJs\ JavaScript}{
+        TypeScript,\quad\
+        React,\quad\
+        Next.js,\quad\
+        Axios,\quad\
+        Prettier,\quad\
+        ESLint
+    }
+
+    \cvskill{\fabHtml\ HTML \bullet\ \fabCssAlt\ CSS}{
+        HTML5,\quad\
+        CSS3,\quad\
+        TailwindCSS
+    }
+
+    \cvskill{\fasDatabase\ Databases}{
+        PostgreSQL,\quad\
+        MySQL,\quad\
+        Redis
+    }
+
+    \cvskill{\fasVial\ Testing}{
+        PyTest,\quad\
+        Mocking,\quad\
+        Coverage,\quad\
+        Factory Boy,\quad\
+        Postman,\quad\
+        Unit test,\quad\
+        Integration test
+    }
+
+    \cvskill{\fasCubes\ Architecture}{
+        Monolithic,\quad\
+        Microservices,\quad\
+        REST API,\quad\
+        DRY,\quad\
+        SOLID
+    }
+
+    \cvskill{\fasLayerGroup\ DevOps}{
+        Docker,\quad\
+        Docker Compose,\quad\
+        Git,\quad\
+        GitHub,\quad\
+        GitHub Actions
+    }
+
+    \cvskill{\fasLaptopCode\ Development}{
+        SCRUM,\quad\
+        Code review,\quad\
+        Visual Studio Code,\quad\
+        Windows,\quad\
+        Ubuntu,\quad\
+        JIRA
+    }
+
+    \cvskill{\fasBrain\ Soft skills}{
+        Communication,\quad\
+        Team collaboration,\quad\
+        Problem solving,\quad\
+        Technical documentation
+    }
+    \vspace{1mm}
+
+\end{cvskills}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Languages
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cvsection{\fasGlobe\ Languages}
+\begin{cvskills}
+    \cvskill{English}
+    {B2}
+    \cvskill{Polish}
+    {Native}
+\end{cvskills}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Projects
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cvsection{\fasCode\ Projects}
+\begin{cventries}
+    \cventry{\fabGithub\ \href{https://github.com/Dejvinczi/BookStore}{\itshape github.com/Dejvinczi/BookStore}}
+    {Full-stack E-commerce Application}
+    {Ongoing}
+    {}
+    {
+        E-commerce platform for online book sales, built with Django and Django REST Framework backend, and Next.js
+        with TypeScript frontend. The application features a sophisticated book catalog with search functionality,
+        JWT authentication, and automated order management powered by Celery. The infrastructure is containerized
+        using Docker with automated CI/CD, while utilizing PostgreSQL and Redis for efficient data handling. Key
+        features include automatic superuser creation and an email notification system for orders.
+    }
+    \vspace{1mm}
+\end{cventries}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Certificates
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cvsection{\fasMedal\ Certificates}
+\begin{cvhonors}
+    \cvhonor{Build a Backend REST API with Python \& Django \- Advanced}
+    {Technical Course}
+    {Udemy}
+    {Nov 2023}
+    \vspace{1mm}
+\end{cvhonors}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Links
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cvsection{\fasLink\ Links}
+\begin{center}
+    {\fabLinkedin\ \href{https://linkedin.com/in/dawid-gurgul}{\fontsize{9pt}{1em}\bodyfont\color{darktext} linkedin.com/in/dawid-gurgul}}
+    \sepBullet\
+    {\fabGithub\ \href{https://www.github.com/dejvinczi}{\fontsize{9pt}{1em}\bodyfont\color{darktext} github.com/dejvinczi}}
+    \sepBullet\
+    {\fasCode\ \href{https://leetcode.com/u/dejvinczi}{\fontsize{9pt}{1em}\bodyfont\color{darktext} leetcode.com/u/dejvinczi}}
+\end{center}
+
+\cvsubsection{}
+\begin{center}
+    \footerstyle{
+        I hereby give consent for my personal data included in my application to be
+        processed for the purposes of the recruitment process under the Regulation (EU) 2016/679 of the
+        European Parliament and of the Council of 27 April 2016 on the protection of natural persons with
+        regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC
+        (General Data Protection Regulation).
+    }
+\end{center}
+
+\end{document}

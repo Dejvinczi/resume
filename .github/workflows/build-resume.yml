@@ -1,0 +1,23 @@
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-resume:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      packages: 'write'
+      pull-requests: 'read'
+    steps:
+      - uses: actions/checkout@v4
+      - name: docker-resume-builder
+        run: make resume-build
+      - uses: 'marvinpinto/action-automatic-releases@latest'
+        with:
+          repo_token: '${{ secrets.GITHUB_TOKEN }}'
+          prerelease: false
+          automatic_release_tag: latest
+          files: |
+            resume.pdf
