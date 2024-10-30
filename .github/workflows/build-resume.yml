@@ -12,7 +12,13 @@ jobs:
       pull-requests: 'read'
     steps:
       - uses: actions/checkout@v4
-      - name: docker-resume-builder
+      - name: Log in to Docker Hub
+        run: echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
+      - name: Build docker image
+        run: make build
+      - name: Push docker image
+        run: make push
+      - name: Build resume
         run: make build-resume
       - uses: 'marvinpinto/action-automatic-releases@latest'
         with:
